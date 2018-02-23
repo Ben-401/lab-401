@@ -17,9 +17,9 @@ It is assumed that:
 - Your computer has a connection to the internet (for updates during install)  
 
 ### INSTALLATION INSTRUCTIONS
-
+```
 BIOS:  
-	recommended to "Load defaults", "Set time", "Set boot order to DVD→HDD", etc
+	recommended to "Load defaults", "Set time", "Set boot order to DVD->HDD", etc
 
 Boot from the DVD, and follow the instructions below.
 
@@ -36,7 +36,7 @@ Installation Type
 	+ "Erase disk and install Ubuntu" - this will create and install onto a SINGLE partition, OR  
 	+ "Something Else" - allows you to manually delete and create partitions.  
 		A suggested partition scheme is:  
-```
+
 			PART	DEV	MNT	SIZE	FSTYPE	NOTES
 			Pri	sda1	/boot	  1G	EXT4		100m - 1000m
 			L	sda5	/swap	16G	linux-swap	2x ram capacity
@@ -45,7 +45,7 @@ Installation Type
 			L	sda8	/var	10G	EXT4		2-10g
 			L	sda9	/tmp	32G	EXT4		2x swap
 			L	sda10	/home	??G	EXT4		rest of the disk
-```
+
 NOTE that the SIZEs listed above are recommended if your HDD is >= 320G, adjust acordingly.  
 	then "Continue" with the setup installation.  
 
@@ -77,9 +77,11 @@ The installation from DVD takes about 20 minutes.
 Following the installation, remove DVD and press 'Return'. PC will reboot.  
 
 Ubuntu 16.04 should boot-up to the login screen.  
+```
 
 ### Configuration
 
+```
 Your name should appear on the login screen. To login, type your 'password' and press enter.  
 
 The desktop will load.  
@@ -87,9 +89,11 @@ The desktop will load.
 (32-bit only)Shortly after, a dialog “Incomplete Language Support” may appear. Dismiss this,.  
 
 (32-bit only) The time may be incorrect, ignore this for now as a system update will fix this.  
+```
 
 ### Perform a System Update to Ubuntu 16.10 (as of 22-FEB-2018)  
 
+```
 Connect to the internet  
 
 Start an x-term (command line interface)  
@@ -109,7 +113,7 @@ Reboot your computer, and re-run the above two commands:
 This should result in an up-to-date system at least to Ubuntu 16.10.  
 
 For reference, the up-to-date system (U15.10) consumes the following HDD space:  
-```
+
 Pri	sda1	/boot	     53 MB
 L	sda5	/swap	        N.A.
 L	sda6	/	    458 MB
@@ -121,11 +125,12 @@ L	sda10	/home	        N.A.
 
 ### optional programs to install
 
+```
 git					source code control software
 unity-tweak-tool			program to tweak/modify the desktop behaviour
 compizconfig-settings-manager	program to tweak/modify the desktop behaviour
 mc					midnight commander file browser (text based)
 openssh-server			used to ssh into a host installation
 
-
+```
 
