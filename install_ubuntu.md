@@ -1,5 +1,5 @@
 
-## Installation instructions for ```Ubuntu 16 LTS``` for use within the 4.01 laboratory.
+## Installation instructions for ```Ubuntu 16.04 LTS``` for use within the 4.01 laboratory.
 
 ### INTRODUCTION
 
@@ -7,7 +7,7 @@ Your studies/research here may require you to use a PC to develop software.
 To facilitate a common development environment,
 it is recommended that each computer have installed the same O/S, programs and user settings.
 
-This document describes the installation procedure to install ```Ubuntu 16 LTS Desktop``` onto a PC (or VM).  
+This document describes the installation procedure to install ```Ubuntu 16.04 LTS Desktop``` onto a PC (or Virtual Machine).  
 It then describes a method to update the O/S.
 
 It is assumed that:  
@@ -83,7 +83,7 @@ password	as above, must match
 The installation from DVD takes about 20 minutes.  
 Following the installation, remove DVD and press 'Return'. PC will reboot.  
 
-Ubuntu 16.04 should boot-up to the login screen.  
+Ubuntu 16.04 LTS should boot-up to the login screen.  
 ```
 
 ### Configuration
@@ -98,7 +98,10 @@ The desktop will load.
 (32-bit only) The time may be incorrect, ignore this for now as a system update will fix this.  
 ```
 
-### Perform a System Update to Ubuntu 16.10 (as of 22-FEB-2018)  
+When using a VM, the VM will display two dialogs on the upper section of the screen regarding Keyboard and Mouse integration.
+Acknowledge this information, then turn-off the notification my clicking the right-hand-side button.
+
+### Perform a System Update
 
 ```
 Connect to the internet  
@@ -112,13 +115,21 @@ Update/upgrade
 	sudo apt-get update  
 	sudo apt-get upgrade  
 
+	during the above commands, you will be asked to enter your password.
 	during the above commands, you will be required to authorise about 300MB download, so select 'y' when asked.  
 
-Reboot your computer, and re-run the above two commands:  
+Reboot your computer using the following command:
+	sudo reboot
+enter your password, and allow the VM to restart.
+Login as normal by entering your password.
+
+Now open the Terminal as described above, and re-run the above two commands:  
 	sudo apt-get update  
 	sudo apt-get upgrade  
-This should result in an up-to-date system at least to Ubuntu 16.10.  
+This should result in an up-to-date system at least to Ubuntu 16.04.  
 
+You can check your version using the following command:
+	cat /etc/os-release
 
 ```
 
@@ -133,3 +144,31 @@ openssh-server			used to ssh into a host installation
 
 ```
 
+### desktop cleanup
+
+```
+You are recommended to delete some of the icons on the LHS-taskbar.
+We have confirmed that the best icons to delete are:
+	LibreOffice Writer
+	LibreOffice Calc
+	LibreOffice Impress
+	Amazon
+	Ubuntu Software
+	System Settings - this can be found in the upper RHS
+	Software Updater - see below
+To delete these icons, right-click on each, -> "Unlock from Launcher"
+
+A common icon to have access to is the "Terminal", so we want this always to be on the LHS taskbar.
+Open the "Termimal" program. An icon will appear on the LHS Taskbar.
+Right-click the "Terminal" icon on the LHS taskbar -> Lock to Launcher
+```
+
+### software Updater
+
+soon after you have been using the new Ubuntu installation for a while (10 mins),
+a dialog will appear from the "Software Updater".
+
+You are recommended to install the 85M or so of updated software
+(the apt-get update/upgrade did not seem to pick this)
+
+```
