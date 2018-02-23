@@ -1,5 +1,5 @@
 
-## Installation instructions for ```Ubuntu 16.04``` for use within the 4.01 laboratory.
+## Installation instructions for ```Ubuntu 16 LTS``` for use within the 4.01 laboratory.
 
 ### INTRODUCTION
 
@@ -7,13 +7,13 @@ Your studies/research here may require you to use a PC to develop software.
 To facilitate a common development environment,
 it is recommended that each computer have installed the same O/S, programs and user settings.
 
-This document describes the installation procedure to install ```Ubuntu 16.04 Desktop``` onto a PC (or VM).  
+This document describes the installation procedure to install ```Ubuntu 16 LTS Desktop``` onto a PC (or VM).  
 It then describes a method to update the O/S.
 
 It is assumed that:  
 - you have a PC that meets the minimum requirements for the installation. Refer to “www.ubuntu.com” for these details.  
 - Your HDD is blank, or is OK to overwrite all data  
-- The install DVD is labelled “Ubuntu 16.04, Desktop Installer, FEB-2016”.  
+- The install DVD is labelled “Ubuntu 16.04”.  
 - Your computer has a connection to the internet (for updates during install)  
 
 ### INSTALLATION INSTRUCTIONS
@@ -22,8 +22,10 @@ BIOS:
 	recommended to "Load defaults", "Set time", "Set boot order to DVD->HDD", etc
 
 Boot from the DVD, and follow the instructions below.
+NOTE that some MACs may say that "Disk is not readible" -> press Ignore.
 
 Welcome  
+	ensure "English"
 	select "Install Ubuntu"
 
 Preparing to install Ubuntu  
@@ -33,8 +35,11 @@ Preparing to install Ubuntu
 
 Installation Type  
 	either select  
-	+ "Erase disk and install Ubuntu" - this will create and install onto a SINGLE partition, OR  
+	+ "Erase disk and install Ubuntu"
+		this will create and install onto a SINGLE partition,
+		it is best for the installation within a VM.
 	+ "Something Else" - allows you to manually delete and create partitions.  
+		this is best when installing on a HDD within a PC-BOX.
 		A suggested partition scheme is:  
 
 			PART	DEV	MNT	SIZE	FSTYPE	NOTES
@@ -45,8 +50,9 @@ Installation Type
 			L	sda8	/var	10G	EXT4		2-10g
 			L	sda9	/tmp	32G	EXT4		2x swap
 			L	sda10	/home	??G	EXT4		rest of the disk
-
 NOTE that the SIZEs listed above are recommended if your HDD is >= 320G, adjust acordingly.  
+	write the changes -> Yes
+
 	then "Continue" with the setup installation.  
 
 Where are you  
@@ -55,6 +61,7 @@ Where are you
 
 Select Keyboard type  
 	(automatically selected as English US/English US)  
+	on the VM, you may need to adjust the HORIZ-size to be able to see all the buttons.
 	-> Continue  
 
 Your Details:  
@@ -97,8 +104,8 @@ The desktop will load.
 Connect to the internet  
 
 Start an x-term (command line interface)  
-	the top icon on the left hand side is 'search'. Do a search and type "xterm".  
-	The search results will find a number of programs, choose "xterm".  
+	the top icon on the left hand side is 'search'. Do a search and type "term".  
+	The search results will find a number of programs, choose "Terminal".  
 
 Update/upgrade
 	in the xterm window, type/perform the following commands:  
@@ -112,15 +119,7 @@ Reboot your computer, and re-run the above two commands:
 	sudo apt-get upgrade  
 This should result in an up-to-date system at least to Ubuntu 16.10.  
 
-For reference, the up-to-date system (U15.10) consumes the following HDD space:  
 
-Pri	sda1	/boot	     53 MB
-L	sda5	/swap	        N.A.
-L	sda6	/	    458 MB
-L	sda7	/usr	  2,800 MB
-L	sda8	/var	    751 MB
-L	sda9	/tmp	        N.A.
-L	sda10	/home	        N.A.
 ```
 
 ### optional programs to install
