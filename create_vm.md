@@ -51,9 +51,9 @@ it takes approx 25mins to format/prepare the VDI (Virtual Disk).
 Following that, the new VM will near appear within the VirtualBox GUI.
 
 To prepare the blank VM with a guest OS link Ubuntu, perform the following:
-
+```
 ### Install an OS on the blank VM
-
+```
 To install Ubuntu on the blank VM, do the following:
 
 Insert the installer-DVD into the MAC,
@@ -68,3 +68,27 @@ tell the VirtualBox to source the guest OS from the Virtual Optical Disk labelle
 Then select "Start".
 
 ```
+### Connect external devices into the VM
+```
+External devices like USB-Sticks, USB-232-convertors, etc
+can be connected to the MAC and by default these external devices
+are NOT mapped into the Virtual Machine.
+
+To map an external device into the VM, do the following:
+
+1. connect the external USB device to the MAC,
+so that the MAC can see it.
+1. within VirtualBox, single click the VM you would like the external USB device to appear
+1. within VirtualBox, single click "Settings" up the top.
+1. ports -> USB -> USB Device Filters
+1. single click the greep "plus" symbol
+1. select the external USB device that you want mapped in.  
+For the Nexys board, choose the device from Digilent.
+1. click OK
+
+The external USB device should now be mapped into the selected VM.  
+If not, remove the external device from the MAC, and reinsert. 
+Type "dmesg" at the prompt (within Ubuntu) to debug.
+```
+
+
