@@ -83,7 +83,8 @@ so that the MAC can see it.
 1. ports -> USB -> USB Device Filters
 1. single click the greep "plus" symbol
 1. select the external USB device that you want mapped in.  
-For the Nexys board, choose the device from Digilent.
+For the Nexys board, choose the device from Digilent.  
+For the miniPCIe board, choose the device from Android.
 1. click OK
 
 The external USB device should now be mapped into the selected VM.  
