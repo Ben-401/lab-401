@@ -96,10 +96,14 @@ The desktop will load.
 (32-bit only)Shortly after, a dialog “Incomplete Language Support” may appear. Dismiss this,.  
 
 (32-bit only) The time may be incorrect, ignore this for now as a system update will fix this.  
-```
 
 When using a VM, the VM will display two dialogs on the upper section of the screen regarding Keyboard and Mouse integration.
 Acknowledge this information, then turn-off the notification my clicking the right-hand-side button.
+
+NOTE that when using the VM on the MAC,
+without a USB-mouse but using just the laptops touchpad,
+to do a right-click you need to hold the "command (flower)" button while pressing the mousepad.
+```
 
 ### Perform a System Update
 

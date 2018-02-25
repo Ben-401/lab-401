@@ -5,6 +5,6 @@
 Create a Virtual Machine on the MACs VirtualBox  
 [./create_vm.md](./create_vm.md)"
 
-Install Ubuntu within the VM
+Install Ubuntu within the VM  
 [./install_ubuntu.md](./install_ubuntu.md)"
 

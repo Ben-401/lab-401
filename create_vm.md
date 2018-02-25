@@ -20,6 +20,7 @@ You need to have the program called "VirtualBox" by "Oracle" installed.
 Download and install this, if it is not already installed.
 Currently we use v5.2.6
 ```
+
 ### CREATE NEW VIRTUAL MACHINE
 ```
 Start the VirtualBox program
@@ -52,6 +53,7 @@ Following that, the new VM will near appear within the VirtualBox GUI.
 
 To prepare the blank VM with a guest OS link Ubuntu, perform the following:
 ```
+
 ### Install an OS on the blank VM
 ```
 To install Ubuntu on the blank VM, do the following:
@@ -66,8 +68,38 @@ and navigate to START, then to NORMAL.
 A dialog will appear,
 tell the VirtualBox to source the guest OS from the Virtual Optical Disk labelled "DVD" or similar.
 Then select "Start".
-
 ```
+
+### CLONING THE VM
+```
+After a clean install has been made of a guest O/S,
+you are recommended to make a clone of the guest O/S, and operate using the clone.  
+This process allows you to return to the original guest, and reclone,
+in the case that you much-up the first clone,
+and do not want to go through the entire installation again of the guest.
+
+To create a clone of the guest O/S, in VirtualBox,
+select the guest-O/S, and right-click -> Clone...
+
+Give the clone a name, and leave DE-selected the initialisation of MAC-address.  
+-> Next
+
+To save HDD-space, and we have seen that this works OK,  
+select "Linked Clone".
+
+After the above, a new VM will appear in VirtualBox,
+and the original guest O/S will be identified as the BASE of a LINKED clone.
+
+You are now recommended to run-off the clone.
+```
+
+### Using the Cloned VM
+```
+After starting the cloned VM, you are recommended to make the VM full screen.
+To make fullscreen, hold CTRL+COMMAND and press 'f'
+This sequence also toggles between fullscreen and windowed VMs.
+```
+
 ### Connect external devices into the VM
 ```
 External devices like USB-Sticks, USB-232-convertors, etc
@@ -91,5 +123,3 @@ The external USB device should now be mapped into the selected VM.
 If not, remove the external device from the MAC, and reinsert. 
 Type "dmesg" at the prompt (within Ubuntu) to debug.
 ```
-
-
