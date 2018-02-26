@@ -8,3 +8,6 @@ Create a Virtual Machine on the MACs VirtualBox
 Install Ubuntu within the VM  
 [./install_ubuntu.md](./install_ubuntu.md)"
 
+Install Xilinx ISE within Ubuntu  
+[./install_ise.md](./install_ise.md)"
+
