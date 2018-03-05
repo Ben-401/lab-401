@@ -102,7 +102,16 @@ Assuming that you copied the provided "run_ise.sh" file into your home directory
 you will then need to set executable flag permissions  
 ```chmod u+x run_ise.sh```  
 
-now optionally place a shortcut on the desktop to run the "run_ise.sh" script (details of this are omitted).  
+Now you can optionally place a shortcut on the desktop or the applications menu ("Dash Panel") to run the "run_ise.sh" script. For example, in `/usr/share/applications`, create a `.desktop` file (i.e. `xilinx_ise.desktop`) and insert the following (changing the paths accordingly to your installation):
+```
+[Desktop Entry]
+Type=Application
+Terminal=false
+Name=Xilinx ISE
+Icon=/opt/Xilinx/14.7/ISE_DS/ISE/data/images/pn-ise.png
+Exec=/home/mega65/run_ise.sh
+```
+This will add the program to the applications menu. When running, you can then pin it to the sidebar ("Launcher"): right-click > `Lock to Launcher`. You can also put this file on the Desktop (`/home/mega65/Desktop`).
 
 When ISE is first launched, a dialog will appear advising of a "Xilinx Licence Error".  
 This is expected so dismiss this dialog.  
